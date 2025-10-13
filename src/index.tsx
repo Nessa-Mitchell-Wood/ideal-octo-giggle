@@ -1,11 +1,17 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { logger } from "hono/logger";
 
 const app = new Hono();
 
+app.use(logger());
+
 app.get("/", (c) => c.text("Hello from nmw.art!"));
 
-const server = serve({ fetch: app.fetch, port: 3000 });
+const server = serve(
+  { fetch: app.fetch, port: 3000 },
+  (info) => `running nmw.art on port ${info.port}...`
+);
 
 process.on("SIGINT", () => {
   server.close();
