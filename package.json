@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Nessa-Mitchell-Wood/ideal-octo-giggle/issues"
   },
-  "homepage": "https://github.com/Nessa-Mitchell-Wood/ideal-octo-giggle#readme"
+  "homepage": "https://github.com/Nessa-Mitchell-Wood/ideal-octo-giggle#readme",
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@types/node": "^24.7.2",
+    "hono": "^4.9.11"
+  }
 }
