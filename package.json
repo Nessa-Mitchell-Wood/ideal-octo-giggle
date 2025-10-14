@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tsx --watch ./src/index.tsx",
-    "start": "npx tsx ./src/index.tsx"
+    "css": "npx @tailwindcss/cli -i ./src/main.css -o ./static/css/main.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/main.css -o ./static/css/main.css",
+    "start": "npx @tailwindcss/cli -i ./src/main.css -o ./static/css/main.css && npx tsx ./src/index.tsx"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,10 @@
   "homepage": "https://github.com/Nessa-Mitchell-Wood/ideal-octo-giggle#readme",
   "dependencies": {
     "@hono/node-server": "^1.19.5",
+    "@tailwindcss/cli": "^4.1.14",
     "@types/node": "^24.7.2",
     "dotenv": "^17.2.3",
-    "hono": "^4.9.11"
+    "hono": "^4.9.11",
+    "tailwindcss": "^4.1.14"
   }
 }
