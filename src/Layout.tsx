@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'hono/jsx';
+import { PropsWithChildren } from "hono/jsx";
 
 export function Layout({
   title,
@@ -13,7 +13,7 @@ export function Layout({
         <link rel="stylesheet" href="/static/css/main.css" />
         <script src="/static/js/main.js" defer></script>
       </head>
-      <body className="bg-black">{children}</body>
+      <body className="bg-black relative">{children}</body>
     </html>
   );
 }
